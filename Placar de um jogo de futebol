@@ -1,0 +1,99 @@
+ 
+
+Placar de um jogo de futebol 
+
+ 
+
+class Placar: 
+
+    def __init__(self, time1, time2): 
+
+        self.time1 = time1 
+
+        self.time2 = time2 
+
+        self.placar_time1 = 0 
+
+        self.placar_time2 = 0 
+
+ 
+
+    def adicionar_gol_time1(self): 
+
+        self.placar_time1 += 1 
+
+ 
+
+    def adicionar_gol_time2(self): 
+
+        self.placar_time2 += 1 
+
+ 
+
+    def mostrar_placar(self): 
+
+        print(f"{self.time1}: {self.placar_time1} - {self.time2}: {self.placar_time2}") 
+
+ 
+
+def main(): 
+
+    time1 = "Time A" 
+
+    time2 = "Time B" 
+
+    placar = Placar(time1, time2) 
+
+ 
+
+    print(f"Bem-vindo ao placar de {time1} vs {time2}!\n") 
+
+    while True: 
+
+        print("O que deseja fazer?") 
+
+        print("1. Adicionar gol para o Time A") 
+
+        print("2. Adicionar gol para o Time B") 
+
+        print("3. Mostrar placar") 
+
+        print("4. Encerrar o jogo") 
+
+ 
+
+        escolha = input("Escolha uma opção (1/2/3/4): ") 
+
+ 
+
+        if escolha == '1': 
+
+            placar.adicionar_gol_time1() 
+
+            print(f"Gol marcado para {time1}!") 
+
+        elif escolha == '2': 
+
+            placar.adicionar_gol_time2() 
+
+            print(f"Gol marcado para {time2}!") 
+
+        elif escolha == '3': 
+
+            placar.mostrar_placar() 
+
+        elif escolha == '4': 
+
+            print("Encerrando o jogo...") 
+
+            break 
+
+        else: 
+
+            print("Opção inválida. Por favor, escolha novamente.") 
+
+ 
+
+if __name__ == "__main__": 
+
+    main() 
